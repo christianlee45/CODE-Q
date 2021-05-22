@@ -1,0 +1,19 @@
+    var highscores = document.querySelector(".scores")
+    var timer = document.querySelector(".time")
+    var content = document.querySelector(".questions")
+    var timeremaining= 120
+    var test = document.querySelector("#startbutton1")
+    
+    test.addeventlistener("click" , setTime())
+
+    function setTime (){
+    var timerinterval = setInterval(function() {
+        timer.textContent  = timeremaining + "timeremaining" ;
+        timeremaining--;
+        if(timeremaining === 1) {
+            clearInterval(timerinterval);
+        }
+
+    } , 1000);
+
+}
